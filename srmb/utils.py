@@ -1,5 +1,7 @@
 import os
 import pickle
+import pygraphviz
+from networkx.drawing import nx_agraph
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score
 
 
@@ -48,3 +50,45 @@ def load_sr_models(key='SR', save_dir='../res_sr/'):
             sr_model = pickle.load(inp)
         models.append(sr_model)
     return models
+
+
+def create_graph(sr_estimator):
+    """
+    Args:
+        sr_estimator (_type_): symbolic classifier object from gplearn
+    Returns:
+        _type_: networkx graph object
+    """
+    dot_data = sr_estimator._program.export_graphviz()
+    G = nx_agraph.from_agraph(pygraphviz.AGraph(dot_data))
+    
+    for key in G.nodes:
+        if G.nodes[key]['label'].startswith('s__'):
+            label = G.nodes[key]['label'][3:].split('_')
+            label = '\n'.join(label)
+            G.nodes[key]['label'] = label
+            G.nodes[key]['fontname'] = 'times italic'
+            G.nodes[key]['fontsize'] = 15
+            G.nodes[key]['fillcolor'] = 'darkolivegreen3'
+        else:
+            label = G.nodes[key]['label']
+            G.nodes[key]['fillcolor'] = 'white'
+            G.nodes[key]['fontname'] = 'courier new'
+            
+    return G
+
+def graph_to_jpg(T, path='abcd.jpg', formatstr='jpg'):
+    """
+    save the networkx digraph to an image.
+    Args:
+        T: networkx digraph object of the jst as returned from `simpler_common_trunk_tree_to_digraph` function
+        path: path to save the jpg file.
+
+    Returns:
+        path of the saved image
+    """
+    from networkx.drawing.nx_agraph import to_agraph
+    A = to_agraph(T)
+    A.layout('dot')
+    A.draw(path, format=formatstr)
+    return path
