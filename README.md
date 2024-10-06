@@ -2,6 +2,10 @@
 
 Code for the preprint ["Interpreting Microbiome Relative Abundance Data Using Symbolic Regression"](add link later).
 
+<p align="center">
+  <img src="https://github.com/swag2198/microbiome-symbolic-regression/blob/main/results_srmb/xgboost_distilled_sr.jpg?raw=true" alt="alt text"/>
+</p>
+
 ## Initial setup
 Install all dependencies with `pip install -e .`. We recommend creating a separate conda environment (with Python >=3.10) for the installation.
 
