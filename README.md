@@ -38,9 +38,10 @@ For the purposes of reproducing the results in the paper, we also supply all the
 
 ## Reproducing results of experiments
 
-- Experiment 1: #todo
-- Experiment 2: #todo
-- Visualization of symbolic regression expression tree: #todo
+- Experiment 1: To reproduce the results in Table 1 in the paper, see this notebook [experiment01_baseline_models_accuracy.ipynb](https://github.com/swag2198/microbiome-symbolic-regression/blob/main/notebooks/experiment01_baseline_models_accuracy.ipynb)
+- Experiment 2: For the knowledge distillation experiment in Section 4.3 of the paper, see this notebook [experiment02_xgboost_surrogate.ipynb](https://github.com/swag2198/microbiome-symbolic-regression/blob/main/notebooks/experiment02_xgboost_surrogate.ipynb)
+- Visualization of symbolic regression expression tree: creating the tree visualization from the learned symbolic regression expression [sr_model_graph_visualization.ipynb](https://github.com/swag2198/microbiome-symbolic-regression/blob/main/notebooks/sr_model_graph_visualization.ipynb)
+- Extraction of top bacteria responsible for CRC: #todo
 
 ## Minimal use
 
@@ -86,6 +87,7 @@ G = create_graph(est)
 display(Image(graph_to_jpg(G, path="../results_srmb/viz.jpg"), width=500, unconfined=True))
 ```
 
+## References
+The code in this repository is heavily based on the [`gplearn`](https://github.com/trevorstephens/gplearn) repository.
+
 ## TODO
-
-
