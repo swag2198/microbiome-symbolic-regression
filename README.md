@@ -1,5 +1,28 @@
 # Interpreting Microbiome Relative Abundance Data Using Symbolic Regression
 
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#initial-setup">Initial setup</a></li>
+    <li><a href="#repository-structure">Repository structure</a></li>
+    <li><a href="#reproducing-results-of-experiments">Reproducing results of experiments</a></li>
+    <li><a href="#minimal-use">Minimal use</a></li>
+    <li><a href="#references">References</a></li>
+  </ol>
+</details>
+
+<!-- <li>
+      <a href="#description">Description</a>
+      <ul>
+        <li><a href="#dependencies">Dependencies</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+</li> -->
+
+
 Code for the preprint ["Interpreting Microbiome Relative Abundance Data Using Symbolic Regression"](add link later).
 
 <p align="center">
