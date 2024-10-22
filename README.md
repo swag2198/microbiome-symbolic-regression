@@ -1,6 +1,6 @@
 # Interpreting Microbiome Relative Abundance Data Using Symbolic Regression
 
-Code for the preprint ["Interpreting Microbiome Relative Abundance Data Using Symbolic Regression"](add link later).
+Code for the preprint ["Interpreting Microbiome Relative Abundance Data Using Symbolic Regression"](https://arxiv.org/abs/2410.16109).
 
 <p align="center">
   <img src="https://github.com/swag2198/microbiome-symbolic-regression/blob/main/results_srmb/xgboost_distilled_sr.jpg?raw=true" alt="alt text"/>
